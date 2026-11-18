@@ -1,0 +1,636 @@
+/* ============================================================
+   MediCare — view layouts (dashboard, profile, doctors, etc.)
+   ============================================================ */
+
+/* ---------- dashboard hero ---------- */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  padding: 26px 28px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.hero .eyebrow {
+  color: var(--brand);
+}
+
+.hero h2 {
+  margin-top: 8px;
+  font-size: 25px;
+  letter-spacing: -0.03em;
+}
+
+.hero p {
+  margin-top: 7px;
+  max-width: 560px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.hero-date {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  min-width: 92px;
+  padding: 13px 18px;
+  text-align: center;
+  border-radius: 14px;
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+}
+
+.hero-date strong {
+  display: block;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.hero-date span {
+  display: block;
+  margin-top: 5px;
+  font-size: 11.5px;
+  color: var(--ink-soft);
+}
+
+.hero-date small {
+  display: block;
+  margin-top: 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--muted);
+}
+
+/* ---------- dashboard grids ---------- */
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.grid-even {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.grid-2 > .card,
+.grid-even > .card {
+  margin: 0;
+  min-width: 0;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.chart-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-wrap {
+  margin-top: 6px;
+  width: 100%;
+}
+
+.chart-wrap svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chart-legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+}
+
+/* ---------- status donut ---------- */
+
+.donut-body {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.donut-body .legend {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* ---------- bars ---------- */
+
+.bar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.bar-info {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.bar-info strong {
+  font-weight: 600;
+}
+
+.bar-info span {
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ---------- rank list ---------- */
+
+.rank {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.rank.top {
+  background: var(--amber-soft);
+  border-color: transparent;
+  color: var(--amber);
+}
+
+/* ---------- date pill ---------- */
+
+.date-pill {
+  flex-shrink: 0;
+  width: 46px;
+  padding: 6px 0;
+  text-align: center;
+  border-radius: 10px;
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+.date-pill strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.1;
+}
+
+.date-pill span {
+  display: block;
+  margin-top: 2px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* ---------- doctors ---------- */
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.doctor-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doctor-head h3 {
+  font-size: 15px;
+}
+
+.doctor-head p {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.doctor-dept {
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.doctor-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.doctor-stats div {
+  text-align: center;
+}
+
+.doctor-stats strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.doctor-stats span {
+  display: block;
+  margin-top: 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+}
+
+.doctor-util {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.doctor-util .util-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.doctor-foot {
+  display: flex;
+  gap: 8px;
+}
+
+.doctor-foot .btn {
+  flex: 1;
+}
+
+/* ---------- patient profile ---------- */
+
+.profile-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 22px 24px;
+}
+
+.profile-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.profile-identity {
+  flex: 1;
+  min-width: 220px;
+}
+
+.profile-identity h2 {
+  font-size: 23px;
+  letter-spacing: -0.03em;
+}
+
+.profile-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.profile-contact {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.profile-contact span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.profile-contact svg {
+  width: 14px;
+  height: 14px;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.profile-stat {
+  padding: 4px 2px;
+}
+
+.profile-stat span {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 650;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.profile-stat strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.profile-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+/* ---------- billing / invoices ---------- */
+
+.invoice-total {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.invoice-total strong {
+  font-size: 15px;
+}
+
+.due {
+  font-weight: 650;
+  color: var(--rose);
+}
+
+.due.zero {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ---------- analytics ---------- */
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 17px 18px;
+}
+
+.insight-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
+.insight-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.insight span {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 650;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.insight strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.insight small {
+  display: block;
+  margin-top: 2px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.split-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.split-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 34px;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.split-row span:first-child {
+  color: var(--ink-soft);
+}
+
+.split-row span:last-child {
+  text-align: right;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.split-track {
+  height: 7px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.split-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--brand);
+}
+
+/* ---------- error state ---------- */
+
+.error-state {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.error-state h2 {
+  font-size: 18px;
+}
+
+.error-state p {
+  margin: 6px auto 18px;
+  max-width: 380px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 1080px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-even {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero {
+    padding: 20px;
+    gap: 16px;
+  }
+  .hero h2 {
+    font-size: 21px;
+  }
+  .hero-date {
+    display: none;
+  }
+  .profile-hero {
+    padding: 18px 16px;
+  }
+  .profile-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .profile-actions {
+    width: 100%;
+  }
+  .profile-actions .btn {
+    flex: 1;
+  }
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+}
